@@ -1,0 +1,33 @@
+{% extends "wagtailadmin/base.html" %}
+{% load wagtailadmin_tags i18n staticfiles gravatar %}
+
+
+{% block content %}
+    {% trans "Page Records" as title_trans %}
+    {% include "wagtailadmin/shared/header.html" with title=title_trans %}
+
+
+    {% load i18n modeladmin_tags %}
+
+    {% if object_list %}
+    <table class="listing full-width">
+        <thead>
+            <tr>
+                <th scope="col">Created</th>
+                <th scope="col">URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in object_list %}
+                <tr>
+                    <td>{{ record.created_at }}</td>
+                    <td><a href="{{ record.get_absolute_url }}">{{ record.page.url }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+
+
+{% endblock %}
