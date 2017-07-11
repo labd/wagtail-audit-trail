@@ -1,0 +1,4 @@
+include LICENSE CHANGES *.rst *.txt
+graft src/wagtail_audit_trail
+global-exclude __pycache__
+global-exclude *.py[co]
