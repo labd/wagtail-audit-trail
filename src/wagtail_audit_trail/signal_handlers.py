@@ -4,6 +4,7 @@ from wagtail.wagtailcore.models import get_page_models
 from wagtail.wagtailcore.signals import page_published
 
 from wagtail_audit_trail import models, diff
+from wagtail_audit_trail.utils import current_user
 
 
 def record_page_publish(instance, **kwargs):
@@ -15,13 +16,14 @@ def record_page_publish(instance, **kwargs):
     else:
         data_diff = ''
 
-    # Create the audit trail object. Since wagtail does not (yet) send the
-    # user in the signal who published the revision we leave it empty for now
+    user = current_user()
     models.PageRecord.objects.create(
         page=instance,
         revision=instance.live_revision,
         diff=json.dumps(data_diff),
-        user=None)
+        user=user,
+        user_fullname=user.get_full_name() if user else '',
+    )
 
 
 def register_signal_handlers():

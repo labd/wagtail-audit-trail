@@ -9,7 +9,7 @@
     <div class="nice-padding">
         <h2>
             Showing changes made between {{ object.previous_record.created_at }} and
-        {{ object.created_at }}
+        {{ object.created_at }}{% if object.user %} by {{ object.user }}{% endif %}
         </h2>
 
        <table class="listing">
