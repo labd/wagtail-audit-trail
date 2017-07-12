@@ -20,12 +20,14 @@
         <tbody>
             {% for record in object_list %}
                 <tr>
-                    <td>{{ record.created_at }}</td>
-                    <td><a href="{{ record.get_absolute_url }}">{{ record.page.url }}</a></td>
+                    <td><a href="{{ record.get_absolute_url }}">{{ record.created_at }}</a></td>
+                    <td>{{ record.page.url }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+    {% else %}
+    <p>No page record entries.</p>
     {% endif %}
 
 
