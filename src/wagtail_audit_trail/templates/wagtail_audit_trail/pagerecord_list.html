@@ -14,7 +14,8 @@
         <thead>
             <tr>
                 <th scope="col">Created</th>
-                <th scope="col">URL</th>
+                <th scope="col">URL (current)</th>
+                <th scope="col">URL (stored)</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <tr>
                     <td><a href="{{ record.get_absolute_url }}">{{ record.created_at }}</a></td>
                     <td>{{ record.page.url }}</td>
+                    <td>{{ record.page_url }}</td>
                 </tr>
             {% endfor %}
         </tbody>

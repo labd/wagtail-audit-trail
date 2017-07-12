@@ -7,6 +7,9 @@
     {% include "wagtailadmin/shared/header.html" with title=title_trans %}
 
     <div class="nice-padding">
+
+    <h1>{{ object.page.title }}</h1>
+
         <h2>
             Showing changes made between {{ object.previous_record.created_at }} and
         {{ object.created_at }}{% if object.user %} by {{ object.user }}{% endif %}

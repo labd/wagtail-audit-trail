@@ -19,6 +19,7 @@ def record_page_publish(instance, **kwargs):
     user = current_user()
     models.PageRecord.objects.create(
         page=instance,
+        page_url=instance.url,
         revision=instance.live_revision,
         diff=json.dumps(data_diff),
         user=user,

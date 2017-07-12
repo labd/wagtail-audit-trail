@@ -45,6 +45,8 @@ class PageRecord(Record):
         blank=True
     )
 
+    page_url = models.CharField(max_length=1024, null=True, blank=True)
+
     revision = models.ForeignKey(
         'wagtailcore.PageRevision',
         related_name='+',
