@@ -12,6 +12,8 @@ def record_page_publish(instance, **kwargs):
 
     if last_revision:
         data_diff = diff.page_revision_diff(last_revision, instance)
+    else:
+        data_diff = ''
 
     # Create the audit trail object. Since wagtail does not (yet) send the
     # user in the signal who published the revision we leave it empty for now
