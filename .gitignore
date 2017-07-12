@@ -3,6 +3,7 @@ sandbox/media/
 *.py[cod]
 *.sqlite3
 .coverage
+.idea
 
 # Build
 build/

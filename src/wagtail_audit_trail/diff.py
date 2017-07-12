@@ -9,8 +9,6 @@ def page_revision_diff(revision_a, revision_b):
         for comp in revision_b.get_edit_handler().get_comparison()
     ]
     comparison = [comp for comp in comparison if comp.has_changed()]
-    print(comparison)
-
 
     result = []
     for comp in comparison:
