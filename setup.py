@@ -24,7 +24,7 @@ tests_require = [
 
 setup(
     name='wagtail-audit-trail',
-    version='0.1.0',
+    version='1.1.1',
     description="Wagtail audit trail",
     long_description=open('README.rst', 'r').read(),
     url='https://github.com/labd/wagtail-audit-trail',

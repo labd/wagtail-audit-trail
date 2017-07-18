@@ -1,4 +1,4 @@
-0.1.1 (unreleased)
+1.1.1 (2017-07-18)
 ------------------
 - Use same diff as the Wagtail Page revision use for streamfields.
 
