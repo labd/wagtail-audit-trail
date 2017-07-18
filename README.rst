@@ -1,6 +1,6 @@
 ===================
 wagtail-audit-trail
-====================
+===================
 
 This wagtail app keeps a global audit trail of changes to pages for compliancy
 laws.
