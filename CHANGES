@@ -1,2 +1,8 @@
+0.1.1 (unreleased)
+------------------
+- Use same diff as the Wagtail Page revision use for streamfields.
+
+
 0.1.0 (2017-07-13)
 ------------------
+- First private release

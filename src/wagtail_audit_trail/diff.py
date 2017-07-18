@@ -17,9 +17,7 @@ def page_revision_diff(revision_a, revision_b):
         }
 
         if isinstance(comp, compare.StreamFieldComparison):
-            item['diff'] = compare.diff_text(
-                force_text(comp.val_a), force_text(comp.val_b)
-            ).to_html()
+            item['diff'] = comp.htmldiff()
 
         elif comp.is_field:
             item['diff'] = comp.htmldiff()
