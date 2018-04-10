@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 install_requires = [
-    'wagtail>=1.11,<1.12',
+    'wagtail>=2.0',
 ]
 
 docs_require = [

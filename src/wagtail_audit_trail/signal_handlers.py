@@ -1,7 +1,7 @@
 import json
 
-from wagtail.wagtailcore.models import get_page_models
-from wagtail.wagtailcore.signals import page_published
+from wagtail.core.models import get_page_models
+from wagtail.core.signals import page_published
 
 from wagtail_audit_trail import models, diff
 from wagtail_audit_trail.utils import current_user
