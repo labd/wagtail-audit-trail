@@ -1,6 +1,6 @@
 from django.utils.encoding import force_text
 
-from wagtail.wagtailadmin import compare
+from wagtail.admin import compare
 
 
 def page_revision_diff(revision_a, revision_b):

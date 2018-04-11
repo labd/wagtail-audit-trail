@@ -1,7 +1,7 @@
-from wagtail.wagtailadmin.edit_handlers import StreamFieldPanel
-from wagtail.wagtailcore.fields import StreamField
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailimages.blocks import ImageChooserBlock
+from wagtail.admin.edit_handlers import StreamFieldPanel
+from wagtail.core.fields import StreamField
+from wagtail.core.models import Page
+from wagtail.images.blocks import ImageChooserBlock
 
 
 class ContentPage(Page):

@@ -2,7 +2,7 @@ import json
 
 from django.db import models
 from django.contrib.auth import get_user_model
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.utils.functional import cached_property
 
 User = get_user_model()
