@@ -12,7 +12,7 @@ docs_require = [
 tests_require = [
     'pytest-cov==2.4.0',
     'pytest-django==3.1.2',
-    'pytest==3.0.5',
+    'pytest==9.0.3',
     'requests-mock==1.1.0',
 
     # Linting
